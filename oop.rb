@@ -3,6 +3,21 @@
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
+class Unicorn
+  def initialize(name)
+    @name = name
+    @color = "silver"
+  end
+
+  def say
+    "*~*I am a lovely #{@color} unicorn, my name is #{@name}*~*"
+  end
+end
+
+gary = Unicorn.new("Gary")
+
+puts gary.say
+puts ""
 
 
 #  Write a class called Vampire
@@ -11,6 +26,33 @@
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
+class Vampire
+  def initialize(name)
+    @name = name
+    @pet = "bat"
+    @thirsty = true
+    @drink = true
+  end
+
+  def change_pet(new_pet)
+    @pet = new_pet
+  end
+
+  def change_thirsty
+    @thirsty = false
+  end
+end
+
+vamp1 = Vampire.new("Todd")
+p vamp1
+
+vamp1.change_pet("dog")
+p vamp1
+
+vamp1.change_thirsty
+p vamp1
+
+puts ""
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
