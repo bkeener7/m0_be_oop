@@ -67,25 +67,31 @@ class Dragon
     @rider = rider
     @color = color
     @is_hungry = true
+    @humans_eaten = 0
   end
 
-  def eat_human(humans_eaten)
-      if humans_eaten >= 4
+  def eat_human
+        @humans_eaten += 1
+        if @humans_eaten >= 4
         @is_hungry = false
       end
+      end
   end
-end
+
 
 dragon1 = Dragon.new("Jim", "Gandalf", "Black")
 p dragon1
 
-dragon1.eat_human(3)
+dragon1.eat_human
 p dragon1
 
-dragon1.eat_human(4)
+dragon1.eat_human
 p dragon1
 
-dragon1.eat_human(5)
+dragon1.eat_human
+p dragon1
+
+dragon1.eat_human
 p dragon1
 
 puts ""
@@ -105,6 +111,7 @@ class Hobbit
     @disposition = disposition
     @age = 0
     @is_adult = false
+    @is_old = false
     @has_ring = false
 
     if @name == "Frodo"
@@ -113,8 +120,10 @@ class Hobbit
   end
 
   def celebrate_birthday
-    @age = @age + 1
-    if @age >= 33
+    @age += 1
+    if @age >= 101
+      @is_old = true
+    elsif @age >= 33
       @is_adult = true
     end
   end
@@ -125,6 +134,76 @@ hobbit2 = Hobbit.new("Frodo", "mean to Samewise sometimes")
 p hobbit1
 p hobbit2
 
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+
+p hobbit1
+
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
 hobbit1.celebrate_birthday
 hobbit1.celebrate_birthday
 hobbit1.celebrate_birthday
